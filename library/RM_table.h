@@ -25,6 +25,8 @@ int **f_createTable(int wiersze, int kolumny);
 
 int *f_createTable(int wiersze);
 
+void f_destroyTable(int *tab);
+
 /*
 czyta tablice
 

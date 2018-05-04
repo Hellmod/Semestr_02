@@ -30,6 +30,12 @@ int *f_createTable(int wiersze){
 	return T;
 }
 
+void f_destroyTable(int *tab){
+	delete[]tab;
+	tab = nullptr;
+	
+}
+
 void f_readTetable(int **tab, int x, int y){
 	for(int i = 0; i <= x; i++){
 		for(int j = 0; j <= y; j++){
