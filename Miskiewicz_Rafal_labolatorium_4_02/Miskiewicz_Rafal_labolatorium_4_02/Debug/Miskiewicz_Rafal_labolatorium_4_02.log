@@ -1,0 +1,6 @@
+﻿  RM_ONP.cpp
+  Miskiewicz_Rafal_labolatorium_4_01.cpp
+c:\git\semestr_02\miskiewicz_rafal_labolatorium_4_02\miskiewicz_rafal_labolatorium_4_02\miskiewicz_rafal_labolatorium_4_01.cpp(18): warning C4018: '<': signed/unsigned mismatch
+  Generating Code...
+c:\git\semestr_02\library\rm_onp.cpp(223): warning C4715: 'f_ope_lacz': not all control paths return a value
+  Miskiewicz_Rafal_labolatorium_4_02.vcxproj -> C:\git\Semestr_02\Miskiewicz_Rafal_labolatorium_4_02\Debug\Miskiewicz_Rafal_labolatorium_4_02.exe
