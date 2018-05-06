@@ -219,10 +219,13 @@ int f_ope_lacz(string c){
 	if((c == "=") || (c == "~") || (c == "^")) return 1;
 	else if((c == "<") || (c == ">") || (c == "-") || (c == "+")
 		|| (c == "*") || (c == "/") || (c == "%")) return 2;
-	else cout << "niepoprawny operator";
+	else{
+		cout << "niepoprawny operator";
+		return NULL;
+	}
 }
 //otwiera plik o podanej nazwie
-void f_otworzplik(ifstream &plik, string nazwa){
+void f_otworzplikZ(ifstream &plik, string nazwa){
 	plik.open(nazwa);
 	if(!plik){
 		cout << "\n nie udalo sie otworzyc pliku !";

@@ -19,4 +19,13 @@ int *f_wczytajTablice(std::fstream & plik, int liczbaWierszy);
 
 bool *f_zapiszTablice(std::fstream & plik, string *tab, int liczbaWierszy);
 
+template<typename U>
+bool * f_zapiszTablice(std::fstream & plik, U* tab, int liczbaWierszy){
+	for(size_t i = 0; i < liczbaWierszy; i++){
+		plik << tab[i] << endl;
+	}
+
+	return nullptr;//TODO dodaæ sprawdzenie zapisu
+}
+
 #endif

@@ -30,6 +30,7 @@ int *f_createTable(int wiersze){
 	return T;
 }
 
+
 void f_destroyTable(int *tab){
 	delete[]tab;
 	tab = nullptr;

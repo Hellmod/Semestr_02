@@ -1,0 +1,4 @@
+﻿  stdafx.cpp
+  Test2.cpp
+Test2.obj : error LNK2019: unresolved external symbol "class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > * __cdecl f_createTable<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >(int)" (??$f_createTable@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@@YAPAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@H@Z) referenced in function _main
+C:\git\Semestr_02\Test2\Debug\Test2.exe : fatal error LNK1120: 1 unresolved externals

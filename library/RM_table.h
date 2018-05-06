@@ -2,7 +2,7 @@
 #define RM_TABLE
 #include <iostream>
 #include <string>
-//#include "stdafx.h"
+
 using namespace std;
 
 
@@ -24,6 +24,39 @@ tworzy dwu wymiarow¹ tablicê
 int **f_createTable(int wiersze, int kolumny);
 
 int *f_createTable(int wiersze);
+
+template<typename U>
+U *f_createTable(int wiersze){
+	U *T;
+	try{
+		T = new U[wiersze];
+	} catch(bad_alloc){
+		cout << "\n  Brak miejsca na utworzenie tablicy" << wiersze;
+		system("pause");
+		exit(0);
+	}
+	return T;
+}
+
+template<typename U>
+U **f_createTable(int wiersze, int kolumny){
+	
+	try{
+		U ** tab = new U *[wiersze];
+		for(int j = 0; j <= wiersze; j++){
+			tab[j] = new U[kolumny];
+		}
+		return tab;
+	} catch(bad_alloc){
+		cout << "\n  Brak miejsca na utworzenie tablicy" << wiersze;
+		system("pause");
+		exit(0);
+	}
+
+
+}
+
+
 
 void f_destroyTable(int *tab);
 

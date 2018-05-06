@@ -46,7 +46,7 @@ fstream f_otworzPlik(string nazwa){
 	else{
 		cout << PL("Nie uda³o siê otworzyæ pliku") << endl;
 		system("pause");
-		//exit(0);
+		exit(0);
 	}
 }
 
@@ -78,4 +78,10 @@ bool * f_zapiszTablice(std::fstream & plik, string * tab, int liczbaWierszy){
 
 	return nullptr;//TODO dodaæ sprawdzenie zapisu
 }
+
+
+// ToAsk czemu nie dzia³a b³¹d przy wywo³aniu "type name is not allowed template" 
+//f_zapiszTablice<int>(plik, f_LMK(max), max);
+
+
 
