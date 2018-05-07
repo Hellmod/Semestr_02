@@ -20,7 +20,7 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{68D3D382-EC0F-49EE-80B4-84E37CB2C839}</ProjectGuid>
+    <ProjectGuid>{CB1888CB-4046-419F-B2D0-6484528FF3F8}</ProjectGuid>
     <RootNamespace>MiskiewiczRafallabolatorium601</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
@@ -130,9 +130,6 @@
     <ClInclude Include="..\..\library\RM_lib.h" />
     <ClInclude Include="..\..\library\RM_ONP.h" />
     <ClInclude Include="..\..\library\RM_table.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="out.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

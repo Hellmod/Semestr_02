@@ -44,7 +44,7 @@ fstream f_otworzPlik(string nazwa){
 		return plik;
 	}
 	else{
-		cout << PL("Nie uda³o siê otworzyæ pliku") << endl;
+		cout << PL("Nie uda³o siê otworzyæ pliku ") <<nazwa<< endl;
 		system("pause");
 		exit(0);
 	}

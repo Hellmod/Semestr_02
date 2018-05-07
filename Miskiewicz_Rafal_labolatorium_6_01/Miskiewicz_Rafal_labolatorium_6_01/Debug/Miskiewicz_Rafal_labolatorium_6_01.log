@@ -1,15 +1,3 @@
-﻿  RM_lab_06.cpp
-c:\git\semestr_02\library\rm_lab_06.cpp(25): warning C4244: '=': conversion from 'double' to '__int64', possible loss of data
-c:\git\semestr_02\library\rm_lab_06.cpp(29): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
-c:\git\semestr_02\library\rm_lab_06.cpp(30): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
-c:\git\semestr_02\library\rm_lab_06.cpp(32): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
-c:\git\semestr_02\library\rm_lab_06.cpp(9): warning C4101: 'x': unreferenced local variable
-  Miskiewicz_Rafal_labolatorium_6_01.cpp
-c:\git\semestr_02\library\rm_file.h(24): warning C4018: '<': signed/unsigned mismatch
-  c:\git\semestr_02\miskiewicz_rafal_labolatorium_6_01\miskiewicz_rafal_labolatorium_6_01\miskiewicz_rafal_labolatorium_6_01.cpp(27): note: see reference to function template instantiation 'bool *f_zapiszTablice<int>(std::fstream &,U *,int)' being compiled
-          with
-          [
-              U=int
-          ]
-  Generating Code...
-  Miskiewicz_Rafal_labolatorium_6_01.vcxproj -> C:\git\Semestr_02\Miskiewicz_Rafal_labolatorium_6_01\Debug\Miskiewicz_Rafal_labolatorium_6_01.exe
+﻿  RM_file.cpp
+c:\users\rafal\documents\github\semestr_02\library\rm_file.cpp(75): warning C4018: '<': signed/unsigned mismatch
+  Miskiewicz_Rafal_labolatorium_6_01.vcxproj -> C:\Users\Rafal\Documents\GitHub\Semestr_02\Miskiewicz_Rafal_labolatorium_6_01\Debug\Miskiewicz_Rafal_labolatorium_6_01.exe
