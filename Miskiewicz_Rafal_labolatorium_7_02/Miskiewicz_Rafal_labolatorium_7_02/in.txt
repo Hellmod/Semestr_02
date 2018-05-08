@@ -1,0 +1,29 @@
+10
+6
+koszula 75 7
+spodnie 150 8
+bluza 250 6
+czapka 35 4
+szalik 10 3
+buty_sportowe 100 9
+
+10
+6
+1 75 7
+2 150 8
+3 250 6
+4 35 4
+5 10 3
+6 100 9
+
+
+
+
+10
+6
+koszula 75 7
+spodnie 150 8
+bluza 250 6
+czapka 35 4
+szalik 10 3
+buty_sportowe 100 9
