@@ -2,145 +2,20 @@
 #include "RM_file.h"
 #include "RM_table.h"
 
-// algorytm tworzacy macierz incydencji oraz wyznaczajacy sasiadow wierzcholkow grafu skierowanego
-// za pomoca kontenera tablicy (std::vector)
-void f_algorytm_wektor(fstream &plik){
-	// ile_kraw->ilosc krawedzi grafu; max->ilosc wierzcholkow; a,b->zmienne pomocnicze
-	int ile_kraw, max = 0, a, b;
-	plik >> ile_kraw;
-	// znalezienie ilosci wieszcholkow
-	for(int i = 0; i < ile_kraw * 2; i++){
-		plik >> a;
-		if(a > max)
-			max = a;
+// algorytm zliczajacy liczbe inwersji tablicy zawierajacej zestaw liczb
+int f_algorytm(int *t, int ilosc_liczb){
+	// warunek podstawowy
+	if(ilosc_liczb == 1)
+		return 0;
+	int wynik = 0;
+	for(int i = 1; i < ilosc_liczb; i++){
+		// porownanie zerowego elementu tablicy z kazym kolejnym
+		if(t[0] > t[i])
+			wynik++;
 	}
-	// utworzenie wektora dwuwymiarowego V[l.krawedzi][l.wierzcholkow]
-	vector<vector<int> > V;
-	vector<int> v(max);
-	// powot do znaku numer 2 (wcelu ponownego czytania wierzcholkow)
-	plik.seekg(1);
-	// przypisanie wartosci w zaleznosci od miejsca wystepowania wierzcholka
-	// 1 liczba-wierzcholek wyjsciowy(1)    2 liczba-wierzcholek docelowy(-1)  
-	for(int i = 0; i < ile_kraw; i++){
-		fill(v.begin(), v.end(), 0);
-		plik >> a; plik >> b;
-		v[a - 1] = 1;
-		v[b - 1] = -1;
-		V.push_back(v);
-	}
-	// Wstep do wyswietlenia rozwiazania
-	for(int i = 0; i < max; i++){
-		if(i == 0) cout << " MACIERZ INCYDENTNOSCI:\n   |";
-		cout << "  " << i + 1 << "  ";
-	}
-	cout << "\n---|--------------------------\n";
-	// w petli jest tworzona macierz incydentosci
-	for(int i = 0; i < ile_kraw; i++){
-		// a,k->zmienne pomocnicze
-		a = 0;
-		int k = 0;
-		// tu wypisuja sie nazwy wierszy (krawedzie)
-		do{
-			if((V[i][k] == 1) || (V[i][k] == -1)){
-				cout << k + 1; a++;
-				if(a == 1) cout << "-";
-				if(a == 2) cout << "|";
-			}
-			k++;
-		} while(a < 2);
-		// tu wypisuje sie rozwiazanie macierzy
-		for(int j = 0; j < max; j++){
-			if(V[i][j] == 1) cout << " +1  ";
-			else if(V[i][j] == -1) cout << " -1  ";
-			else cout << "  0  ";
-		}
-		cout << endl;
-	}
-	// w petli jest rozwiazanie do somsiadow wszystkich wierzcholkow grafu
-	cout << "\n Sasiedzi kazdego wierzcholka grafu:\n";
-	for(int i = 0; i < max; i++){
-		// podanie rodzaju wierzcholka
-		cout << i + 1 << ": ";
-		// znalezienie wartosci +1 dla poszczegolnej kolumny
-		for(int j = 0; j <ile_kraw; j++)
-			if(V[j][i] == 1)
-				// znalezie wartosci -1 dla poszczegolnego wiersza
-				for(int k = 0; k < max; k++)
-					if(V[j][k] == -1)
-						// wyswietlenie somsiada
-						cout << k + 1 << " ";
-		cout << endl;
-	}
+	//z kazdym krokiem rozmiar tablicy sie zmniejsza o 1, a zerowy element tablicy jest rowny kolejnemu
+	return wynik + f_algorytm(t + 1, ilosc_liczb - 1);
 }
-// algorytm tworzacy macierz incydencji oraz wyznaczajacy sasiadow wierzcholkow grafu skierowanego
-// za pomoca tablicy dynamicznej dwuymiarowej
-void f_algorytm_tablica(fstream &plik){
-	// ile_kraw->ilosc krawedzi grafu; max->ilosc wierzcholkow; a,b->zmienne pomocnicze
-	// **t->tablica dwuwymiarowa przechowujaca +1 i -1 potrzebne do stworzenia macierzy incydentosci
-	int ile_kraw, max = 0, a, b, **t = nullptr;
-	plik >> ile_kraw;
-	// znalezienie ilosci wieszcholkow
-	for(int i = 0; i < ile_kraw * 2; i++){
-		plik >> a;
-		if(a > max)
-			max = a;
-	}
-	// utworzenie tablicy dwuwymiarowej t[l.krawedzi][l.wierzcholkow]
-	t=f_createTable<int>(ile_kraw, max);
-	// powot do znaku numer 2 (wcelu ponownego czytania wierzcholkow)
-	plik.seekg(1);
-	// przypisanie wartosci w zaleznosci od miejsca wystepowania wierzcholka
-	// 1 liczba-wierzcholek wyjsciowy(1)    2 liczba-wierzcholek docelowy(-1)  
-	for(int i = 0; i < ile_kraw; i++){
-		plik >> a; plik >> b;
-		t[i][a - 1] = 1;
-		t[i][b - 1] = -1;
-	}
-	// Wstep do wyswietlenia rozwiazania
-	for(int i = 0; i < max; i++){
-		if(i == 0) cout << " MACIERZ INCYDENTNOSCI:\n   |";
-		cout << "  " << i + 1 << "  ";
-	}
-	cout << "\n---|--------------------------\n";
-	// w petli jest tworzona macierz incydentosci
-	for(int i = 0; i < ile_kraw; i++){
-		// a,k->zmienne pomocnicze
-		a = 0;
-		int k = 0;
-		// tu wypisuja sie nazwy wierszy (krawedzie)
-		do{
-			if((t[i][k] == 1) || (t[i][k] == -1)){
-				cout << k + 1; a++;
-				if(a == 1) cout << "-";
-				if(a == 2) cout << "|";
-			}
-			k++;
-		} while(a < 2);
-		// tu wypisuje sie rozwiazanie macierzy
-		for(int j = 0; j < max; j++){
-			if(t[i][j] == 1) cout << " +1  ";
-			else if(t[i][j] == -1) cout << " -1  ";
-			else cout << "  0  ";
-		}
-		cout << endl;
-	}
-	// w petli jest rozwiazanie do somsiadow wszystkich wierzcholkow grafu
-	cout << "\n Sasiedzi kazdego wierzcholka grafu:\n";
-	for(int i = 0; i < max; i++){
-		// podanie rodzaju wierzcholka
-		cout << i + 1 << ": ";
-		// znalezienie wartosci +1 dla poszczegolnej kolumny
-		for(int j = 0; j <ile_kraw; j++)
-			if(t[j][i] == 1)
-				// znalezie wartosci -1 dla poszczegolnego wiersza
-				for(int k = 0; k < max; k++)
-					if(t[j][k] == -1)
-						// wyswietlenie somsiada
-						cout << k + 1 << " ";
-		cout << endl;
-	}
-}
-
 
 // Liniowa Metoda Kongruencyjna
 int *f_LMK(int max){

@@ -1,23 +1,32 @@
+//zadanie 5.1
 #include "..\..\library\RM_lab_06.h"
 #include "..\..\library\RM_file.h"
-#include "..\..\library\RM_table.h"
-//#include "libFiles.h"
 using namespace std;
 
 int main(){
-	// stworzenie obiektu
-	fstream plik;
-	plik = f_otworzPlik("in");
-	//f_otworzplik(plik, "in.txt");
-	cout << "Rozwiazanie przy pomocy tablicy dynamicznej dwuwymiarowej:\n\n";
-	f_algorytm_tablica(plik);
-	cout << "\n\n\nRozwiazanie przy pomocy kontenera tablicy (std::vector):\n\n";
-	// ustawienie kursora na pierwszy znak z pliku
-	plik.seekg(0);
-	f_algorytm_wektor(plik);
-	//zamkniecie obiektu
-	plik.close();
+	// *t->tablica zestawu danych, o rozmiarze[ilosc_liczb]
+	int liczba_zestawow, ilosc_liczb, *t;
+	// tworzenie obiektów: in-do odczytu z pliku; out->do zapisu do pliku
+	fstream in;
+	fstream out;
+	in = f_otworzPlik("in");
+	out = f_otworzPlikZapis("out");
+	// wczytanie liczby zestawów
+	in >> liczba_zestawow;
+	for(int i = 0; i < liczba_zestawow; i++){
+		// wczytanie ilosci danych zestawu
+		in >> ilosc_liczb;
+		// tworzenie tablicy zawierajacej jeden zestaw danych
+		t = new int[ilosc_liczb];
+		for(int i = 0; i < ilosc_liczb; i++)
+			in >> t[i];
+		//zapis wyniku (liczby inwersji w tablicy t) do pliku
+		out << f_algorytm(t, ilosc_liczb) << endl;
+	}
+	in.close();
+	out.close();
 
 	system("pause");
+	
 	return 0;
 }

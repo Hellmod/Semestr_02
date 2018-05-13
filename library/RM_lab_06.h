@@ -11,12 +11,10 @@
 using namespace std;
 
 
-// algorytm tworzacy macierz incydencji oraz wyznaczajacy sasiadow wierzcholkow grafu skierowanego
-// za pomoca kontenera tablicy (std::vector)
-void f_algorytm_wektor(fstream &plik);
-// algorytm tworzacy macierz incydencji oraz wyznaczajacy sasiadow wierzcholkow grafu
-// za pomoca tablicy dynamicznej dwuymiarowej
-void f_algorytm_tablica(fstream &plik);
+// algorytm zliczajacy liczbe inwersji tablicy zawierajacej zestaw liczb
+int f_algorytm(int *t, int ilosc_liczb);
+
+
 
 // Liniowa Metoda Kongruencyjna
 int *f_LMK(int max);

@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="file">
+      <UniqueIdentifier>{193e860f-e451-42d5-98ef-c49da3501eb5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Miskiewicz_Rafal_labolatorium_6_01.cpp">
@@ -22,6 +25,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\library\RM_file.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\library\RM_graf.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\library\RM_lab_06.cpp">
@@ -44,6 +50,9 @@
     <ClInclude Include="..\..\library\RM_file.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\library\RM_graf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\library\RM_lab_06.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -56,5 +65,13 @@
     <ClInclude Include="..\..\library\RM_table.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="in.txt">
+      <Filter>file</Filter>
+    </Text>
+    <Text Include="out.txt">
+      <Filter>file</Filter>
+    </Text>
   </ItemGroup>
 </Project>

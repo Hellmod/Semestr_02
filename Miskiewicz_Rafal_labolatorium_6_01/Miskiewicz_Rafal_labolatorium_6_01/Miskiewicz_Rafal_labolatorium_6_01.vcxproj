@@ -20,7 +20,7 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{CB1888CB-4046-419F-B2D0-6484528FF3F8}</ProjectGuid>
+    <ProjectGuid>{64F50EA2-4DE5-4877-ACC1-41DA6C16AE97}</ProjectGuid>
     <RootNamespace>MiskiewiczRafallabolatorium601</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
@@ -117,6 +117,7 @@
   <ItemGroup>
     <ClCompile Include="..\..\library\c_Lista.cpp" />
     <ClCompile Include="..\..\library\RM_file.cpp" />
+    <ClCompile Include="..\..\library\RM_graf.cpp" />
     <ClCompile Include="..\..\library\RM_lab_06.cpp" />
     <ClCompile Include="..\..\library\RM_lib.cpp" />
     <ClCompile Include="..\..\library\RM_ONP.cpp" />
@@ -126,10 +127,15 @@
   <ItemGroup>
     <ClInclude Include="..\..\library\c_Lista.h" />
     <ClInclude Include="..\..\library\RM_file.h" />
+    <ClInclude Include="..\..\library\RM_graf.h" />
     <ClInclude Include="..\..\library\RM_lab_06.h" />
     <ClInclude Include="..\..\library\RM_lib.h" />
     <ClInclude Include="..\..\library\RM_ONP.h" />
     <ClInclude Include="..\..\library\RM_table.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="in.txt" />
+    <Text Include="out.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
