@@ -68,3 +68,71 @@ void zapis_do_pliku(fstream &plik, int ilosc_wierszy, int ilosc_kolumn, int** p,
 		plik << endl;
 	}
 }
+
+
+//--------------------------------
+
+bool f_algorytm_3(int waga, int *t, int ile, int suma, int a, bool* &wynik){
+	if(suma == waga)
+		return true;
+	if(suma > waga)
+		return false;
+	if(a >= ile)
+		return false;
+	wynik[a] = true;
+	//wywo³anie funkcji ze zwiekszeniem sumy o kolejny element zestau 
+	bool czyZnalazl = f_algorytm_3(waga, t, ile, suma + t[a], a + 1, wynik);
+	if(czyZnalazl)
+		return true;
+	//wywo³anie funkcji bez zwiekszeniem sumy 
+	wynik[a] = false;
+	f_algorytm_3(waga, t, ile, suma, a + 1, wynik);
+}
+
+
+bool f_algorytm_2(int waga, int *t, int ile, int suma, int a, bool* &wynik){
+	cout << " w[" << a << "]=F z[" << a << "]=" << t[a] << " @" << suma << "@ ";
+	if(suma == waga){
+		cout << "OK, koniec poszukiwan" << endl;
+		return true;
+	}
+	if(suma > waga){
+		cout << "zbyt duzo" << endl;
+		return false;
+	}
+	if(a >= ile){
+		cout << "koniec zestawu" << endl;
+		return false;
+	}
+	//wywo³anie z wzieciem aktualnej liczby, zwiekszenie zajetosci plecaka 
+	wynik[a] = true;
+	cout << " w[" << a << "]=T #1";
+	bool czyZnalazl = f_algorytm_3(waga, t, ile, suma + t[a], a + 1, wynik);
+	cout << " ak." << a;
+	if(czyZnalazl)
+		return true;
+	//wywo³anie bez wzieca aktualnej liczby
+	wynik[a] = false;
+	cout << " w[" << a << "]=F #2";
+	f_algorytm_3(waga, t, ile, suma, a + 1, wynik);
+	//cout << " ak." << a;
+}
+// algorytm
+void f_algorytm_1(ofstream &plik, int waga, int *t, int ile){
+	for(int i = 0; i < ile; i++){
+		plik << t[i] << " ";
+		cout << t[i] << " ";
+	}
+	plik << endl;
+	cout << endl;
+
+	int suma = 20;
+	vector<int> liczby;
+	if(suma == waga){
+		cout << waga << "= ";
+		for(int i = 0; i < liczby.size(); i++)
+			cout << liczby[i] << " ";
+	}
+
+
+}
