@@ -1,10 +1,10 @@
 #pragma once
-class c_Lista{
+class s_ListaTree{
 public:
 	int liczba,element;
-	c_Lista *next=nullptr;
+	s_ListaTree *next=nullptr;
 
-	c_Lista(int element1);
+	s_ListaTree(int element1);
 	bool f_czyPusta();
 	int f_ileElementow();
 	int f_szczytowyElement();

@@ -60,6 +60,8 @@ struct s_Lista{
 };
 
 int main(){
+
+	/*
 	{
 		s_Lista l1;
 		//-------------sprawdzenie zwalniania pamiêci-----------------
@@ -93,7 +95,9 @@ int main(){
 			cout << PL("list5a powinna byæ puste") << endl;
 		cout << l1.f_ileElementow() << PL("<-- iloœæ elemenetów") << endl;
 	}
-	/*
+	*/
+
+	
 	{
 		c_Lista l1(0);
 		//-------------sprawdzenie zwalniania pamiêci-----------------
@@ -128,7 +132,7 @@ int main(){
 		cout << l1.f_ileElementow() << PL("<-- iloœæ elemenetów") << endl;
 	}
 
-	*/
+	
 	system("pause");
 	return 0;
 }

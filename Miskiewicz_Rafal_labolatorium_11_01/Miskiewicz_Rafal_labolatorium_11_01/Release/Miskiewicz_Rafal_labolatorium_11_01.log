@@ -1,0 +1,26 @@
+﻿  c_Tree.cpp
+  RM_file.cpp
+c:\git\semestr_02\library\rm_file.cpp(75): warning C4018: '<': signed/unsigned mismatch
+  RM_lib.cpp
+c:\git\semestr_02\library\rm_lib.cpp(10): warning C4309: 'static_cast': truncation of constant value
+c:\git\semestr_02\library\rm_lib.cpp(11): warning C4309: 'static_cast': truncation of constant value
+c:\git\semestr_02\library\rm_lib.cpp(12): warning C4309: 'static_cast': truncation of constant value
+c:\git\semestr_02\library\rm_lib.cpp(13): warning C4309: 'static_cast': truncation of constant value
+c:\git\semestr_02\library\rm_lib.cpp(14): warning C4309: 'static_cast': truncation of constant value
+c:\git\semestr_02\library\rm_lib.cpp(15): warning C4309: 'static_cast': truncation of constant value
+c:\git\semestr_02\library\rm_lib.cpp(16): warning C4309: 'static_cast': truncation of constant value
+c:\git\semestr_02\library\rm_lib.cpp(17): warning C4309: 'static_cast': truncation of constant value
+c:\git\semestr_02\library\rm_lib.cpp(18): warning C4309: 'static_cast': truncation of constant value
+c:\git\semestr_02\library\rm_lib.cpp(19): warning C4309: 'static_cast': truncation of constant value
+c:\git\semestr_02\library\rm_lib.cpp(20): warning C4309: 'static_cast': truncation of constant value
+c:\git\semestr_02\library\rm_lib.cpp(21): warning C4309: 'static_cast': truncation of constant value
+c:\git\semestr_02\library\rm_lib.cpp(22): warning C4309: 'static_cast': truncation of constant value
+c:\git\semestr_02\library\rm_lib.cpp(23): warning C4309: 'static_cast': truncation of constant value
+c:\git\semestr_02\library\rm_lib.cpp(24): warning C4309: 'static_cast': truncation of constant value
+c:\git\semestr_02\library\rm_lib.cpp(25): warning C4309: 'static_cast': truncation of constant value
+c:\git\semestr_02\library\rm_lib.cpp(26): warning C4309: 'static_cast': truncation of constant value
+c:\git\semestr_02\library\rm_lib.cpp(27): warning C4309: 'static_cast': truncation of constant value
+  RM_table.cpp
+  Miskiewicz_Rafal_labolatorium_11_03.cpp
+Miskiewicz_Rafal_labolatorium_11_03.obj : error LNK2001: unresolved external symbol "public: class c_Tree * __thiscall s_ListaTree::f_szczytowyElement(void)" (?f_szczytowyElement@s_ListaTree@@QAEPAVc_Tree@@XZ)
+C:\git\Semestr_02\Miskiewicz_Rafal_labolatorium_11_01\Release\Miskiewicz_Rafal_labolatorium_11_01.exe : fatal error LNK1120: 1 unresolved externals
