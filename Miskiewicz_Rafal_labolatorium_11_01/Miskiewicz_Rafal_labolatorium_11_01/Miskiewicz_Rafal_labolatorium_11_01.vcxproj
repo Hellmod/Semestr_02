@@ -116,11 +116,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\library\c_Tree.cpp" />
+    <ClCompile Include="..\..\library\RM_lib.cpp" />
     <ClCompile Include="..\..\library\RM_table.cpp" />
     <ClCompile Include="Miskiewicz_Rafal_labolatorium_11_03.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\library\c_Tree.h" />
+    <ClInclude Include="..\..\library\RM_lib.h" />
     <ClInclude Include="..\..\library\RM_table.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

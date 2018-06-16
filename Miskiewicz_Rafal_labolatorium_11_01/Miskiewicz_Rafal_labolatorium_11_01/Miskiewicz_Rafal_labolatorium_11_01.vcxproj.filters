@@ -24,12 +24,18 @@
     <ClCompile Include="..\..\library\RM_table.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\library\RM_lib.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\library\c_Tree.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\library\RM_table.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\library\RM_lib.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
