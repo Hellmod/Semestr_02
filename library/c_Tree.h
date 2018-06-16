@@ -14,6 +14,7 @@ public:
 	c_Tree(double wartosc);
 	c_Tree(double wartosc,std::string nazwa);
 	c_Tree(double wartosc, c_Tree * branch_L, c_Tree * branch_R);
+	c_Tree(c_Tree * branch_L, c_Tree * branch_R);
 	
 	~c_Tree();
 
@@ -24,24 +25,10 @@ public:
 	bool f_dodajElement(c_Tree *branch_L, c_Tree *branch_R);
 	void f_dopiszdroge(std::string nazwa);
 	void f_wypisz();
+
+friend 	bool operator==(c_Tree t1, c_Tree t2);
+friend 	bool operator<(c_Tree t1, c_Tree t2);
+friend 	bool operator>(c_Tree t1, c_Tree t2);
+//friend 	bool operator=(c_Tree t1);
 };
 
-struct s_ListaTree{
-
-	c_Tree *drzewo;
-	int liczba;
-	s_ListaTree *next = nullptr;
-	s_ListaTree *head;
-
-	s_ListaTree();
-	s_ListaTree(c_Tree *element1);
-	bool f_czyPusta();
-	int f_ileElementow();
-	c_Tree *f_szczytowyElement();
-	bool f_dodajElement(c_Tree *element1);
-	bool f_usunElement();
-};
-
-struct s_elementListy{
-
-};

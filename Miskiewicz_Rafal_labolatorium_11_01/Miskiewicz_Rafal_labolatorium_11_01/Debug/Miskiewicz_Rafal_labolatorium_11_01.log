@@ -1,5 +1,4 @@
-﻿  c_Tree.cpp
-  Miskiewicz_Rafal_labolatorium_11_03.cpp
+﻿  Miskiewicz_Rafal_labolatorium_11_03.cpp
+  c_Tree.cpp
   Generating Code...
-c_Tree.obj : error LNK2019: unresolved external symbol "public: __thiscall s_ListaTree::s_ListaTree(void)" (??0s_ListaTree@@QAE@XZ) referenced in function "public: bool __thiscall s_ListaTree::f_dodajElement(class c_Tree *)" (?f_dodajElement@s_ListaTree@@QAE_NPAVc_Tree@@@Z)
-C:\git\Semestr_02\Miskiewicz_Rafal_labolatorium_11_01\Debug\Miskiewicz_Rafal_labolatorium_11_01.exe : fatal error LNK1120: 1 unresolved externals
+  Miskiewicz_Rafal_labolatorium_11_01.vcxproj -> C:\Users\Rafal\Documents\GitHub\Semestr_02\Miskiewicz_Rafal_labolatorium_11_01\Debug\Miskiewicz_Rafal_labolatorium_11_01.exe

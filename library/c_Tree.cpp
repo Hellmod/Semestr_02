@@ -21,6 +21,12 @@ c_Tree::c_Tree(double wartosc, c_Tree *branch_L, c_Tree *branch_R){
 	this->branch_R = branch_R;
 }
 
+c_Tree::c_Tree(c_Tree * branch_L, c_Tree * branch_R){
+	this->branch_L = branch_L;
+	this->branch_R = branch_R;
+	this->wartosc = branch_L->f_Wartosc() + branch_R->f_Wartosc();
+}
+
 c_Tree::~c_Tree(){
 }
 
@@ -79,63 +85,23 @@ void c_Tree::f_wypisz(){
 
 //------------------------------------------------------------
 
-
-
-s_ListaTree::s_ListaTree(c_Tree *element1){
-	
-	this->drzewo = element1;
-	liczba = 1;
-}
-
-bool s_ListaTree::f_czyPusta(){
-	if(next == nullptr)
+bool operator==(c_Tree t1, c_Tree t2){
+	if(t1.f_Wartosc() == t2.f_Wartosc())
 		return true;
 	else
 		return false;
 }
 
-int s_ListaTree::f_ileElementow(){
-	return liczba;
+bool operator<(c_Tree t1, c_Tree t2){
+	if(t1.f_Wartosc() < t2.f_Wartosc())
+		return true;
+	else
+		return false;
 }
 
-c_Tree * s_ListaTree::f_szczytowyElement(){
-	std::cout << drzewo->wartosc << "<-wartosc" << head->drzewo->wartosc << "head wartosc" << std::endl;
-	return drzewo;
-}
-
-bool s_ListaTree::f_dodajElement(c_Tree *element1){
-
-	s_ListaTree *nowy = new s_ListaTree(element1);
-	nowy->next = head;
-	if(head == nullptr)
-		this->head = new s_ListaTree;
-	head->next = nowy;
-	
-
-
-
-
-
-
-
-
-
-
-
-
-
-	//s_ListaTree *nowy = new s_ListaTree(element1);
-	//nowy->next = head;
-	//head = nowy;
-
-	liczba++;
-	std::cout << "dodano element o wartosci " << element1->f_Wartosc() << std::endl;
-	return 1;
-}
-
-bool s_ListaTree::f_usunElement(){
-	std::cout << "usuwam element o wartosci " << this->drzewo->f_Wartosc() << std::endl;
-	head->next = next->next;
-	liczba--;
-	return false;
+bool operator>(c_Tree t1, c_Tree t2){
+	if(t1.f_Wartosc() > t2.f_Wartosc())
+		return true;
+	else
+		return false;
 }
