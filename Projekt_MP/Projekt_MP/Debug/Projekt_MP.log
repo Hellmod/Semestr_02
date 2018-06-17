@@ -1,0 +1,6 @@
+﻿  graphicalDisplay.cpp
+c:\git\semestr_02\projekt_mp\library\graphicaldisplay.cpp(68): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\git\semestr_02\projekt_mp\library\graphicaldisplay.cpp(85): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  Projekt_MP.cpp
+  Generating Code...
+  Projekt_MP.vcxproj -> C:\git\Semestr_02\Projekt_MP\Debug\Projekt_MP.exe

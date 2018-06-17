@@ -1,0 +1,9 @@
+﻿  RM_sortowanie.cpp
+c:\git\semestr_02\library\rm_sortowanie.cpp(192): warning C4244: '=': conversion from 'double' to '__int64', possible loss of data
+c:\git\semestr_02\library\rm_sortowanie.cpp(196): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
+c:\git\semestr_02\library\rm_sortowanie.cpp(197): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
+c:\git\semestr_02\library\rm_sortowanie.cpp(199): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
+c:\git\semestr_02\library\rm_sortowanie.cpp(170): warning C4101: 'x': unreferenced local variable
+  Miskiewicz_Rafal_labolatorium_12_01.cpp
+  Generating Code...
+  Miskiewicz_Rafal_labolatorium_12_01.vcxproj -> C:\git\Semestr_02\Miskiewicz_Rafal_labolatorium_12_01\Debug\Miskiewicz_Rafal_labolatorium_12_01.exe

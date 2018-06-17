@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2043
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Miskiewicz_Rafal_labolatorium_12_01", "Miskiewicz_Rafal_labolatorium_12_01\Miskiewicz_Rafal_labolatorium_12_01.vcxproj", "{0549B57D-7AFE-4657-B169-681D5F0838E9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0549B57D-7AFE-4657-B169-681D5F0838E9}.Debug|x64.ActiveCfg = Debug|x64
+		{0549B57D-7AFE-4657-B169-681D5F0838E9}.Debug|x64.Build.0 = Debug|x64
+		{0549B57D-7AFE-4657-B169-681D5F0838E9}.Debug|x86.ActiveCfg = Debug|Win32
+		{0549B57D-7AFE-4657-B169-681D5F0838E9}.Debug|x86.Build.0 = Debug|Win32
+		{0549B57D-7AFE-4657-B169-681D5F0838E9}.Release|x64.ActiveCfg = Release|x64
+		{0549B57D-7AFE-4657-B169-681D5F0838E9}.Release|x64.Build.0 = Release|x64
+		{0549B57D-7AFE-4657-B169-681D5F0838E9}.Release|x86.ActiveCfg = Release|Win32
+		{0549B57D-7AFE-4657-B169-681D5F0838E9}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {00EFC1B7-A365-4331-9E96-FD9B5A2A2191}
+	EndGlobalSection
+EndGlobal
